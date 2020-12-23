@@ -2,19 +2,89 @@ import React, { Component } from 'react';
 import './Navbar.css';
 
 class Navbar extends Component {
+    constructor() {
+        super();
+        this.state = {
+          profile: false,
+          notifications: false,
+          showAll: false,
+          closeAll: false,
+        };
+      }
+    
+      setProfile = () => {
+        if (this.state.notifications) {
+          this.setState(function (prevState, props) {
+            return {
+              profile: !prevState.profile,
+              notifications: !prevState.notifications,
+            };
+          });
+        } else {
+          this.setState(function (prevState, props) {
+            return { profile: !prevState.profile };
+          });
+        }
+      };
+    
+      setNotificatios = () => {
+        if (this.state.profile) {
+          this.setState(function (prevState, props) {
+            return {
+              profile: !prevState.profile,
+              notifications: !prevState.notifications,
+            };
+          });
+        } else {
+          this.setState(function (prevState, props) {
+            return { notifications: !prevState.notifications };
+          });
+        }
+      };
+    
+      displayAll = () => {
+        this.setState({ showAll: true, notifications: false });
+      };
+      closeDisplay = () => {
+        this.setState({ showAll: false, closeAll: true });
+      };
+    
+    
+
     render() {
         return (
             <div className="wrapper">
                 <div className="navbar">
                     <div className="navbar_left">
                     <div className="logo">
-                        <a href="#">Coding Market</a>
+                        <p href="#">Coding Market</p>
                     </div>
                     </div>
+                    <input type="checkbox" id="menu-toggle" />
+                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
 
+                    <div className="nav">
+                        <ul className="nav-links">
+                            <li className="nav-item hide"><p href="#" className="nav-link">Notifications</p></li>
+                            <li className="nav-item hide"><p href="#" className="nav-link">Profile</p></li>
+                            <li className="nav-item"><p href="#" className="nav-link">Home</p></li>
+                            <li className="nav-item"><p href="#" className="nav-link">Market Place</p></li>
+                            <li className="nav-item"><p href="#" className="nav-link">Dashboard</p></li>
+                            <li className="nav-item"><p href="#" className="nav-link">Journal</p></li>
+                            <label htmlFor="menu-toggle" className="menu-hide"><i className="fa fa-times"></i></label>
+                        </ul>
+                    </div>
                     <div className="navbar_right">
-                    <div className="notifications">
-                        <div className="icon_wrap"><i className="far fa-bell"></i></div>
+                    <div
+                    className={
+                        this.state.notifications
+                        ? "notifications active"
+                        : "notifications"
+                    }
+                    >
+                    <div onClick={this.setNotificatios} className="icon_wrap">
+                        <i className="far fa-bell"></i>
+                    </div>
                         
                         <div className="notification_dd">
                             <ul className="notification_ul">
@@ -99,14 +169,16 @@ class Navbar extends Component {
                                     </div>
                                 </li> 
                                 <li className="show_all">
-                                    <p className="link">Show All Activities</p>
+                                <p onClick={this.displayAll} className="link">
+                                Show All Activities
+                                </p>
                                 </li> 
                             </ul>
                         </div>
                         
                     </div>
-                    <div className="profile">
-                        <div className="icon_wrap">
+                    <div className={this.state.profile ? "profile active" : "profile"}>
+                     <div onClick={this.setProfile} className="icon_wrap">
                         <img src="https://i.imgur.com/x3omKbe.png" alt="profile_pic" />
                         <span className="name">John Alex</span>
                         <i className="fas fa-chevron-down"></i>
@@ -114,27 +186,33 @@ class Navbar extends Component {
 
                         <div className="profile_dd">
                         <ul className="profile_ul">
-                            <li className="profile_li"><a className="profile" href="#"><span className="picon"><i className="fas fa-user-alt"></i>
-                                </span>Profile</a>
+                            <li className="profile_li"><p className="profile" href="#"><span className="picon"><i className="fas fa-user-alt"></i>
+                                </span>Profile</p>
                             <div className="btn">My Account</div>
                             </li>
-                            <li><a className="address" href="#"><span className="picon"><i className="fas fa-map-marker"></i></span>Address</a></li>
-                            <li><a className="settings" href="#"><span className="picon"><i className="fas fa-cog"></i></span>Settings</a></li>
-                            <li><a className="logout" href="#"><span className="picon"><i className="fas fa-sign-out-alt"></i></span>Logout</a></li>
+                            <li><p className="address" href="#"><span className="picon"><i className="fas fa-map-marker"></i></span>Address</p></li>
+                            <li><p className="settings" href="#"><span className="picon"><i className="fas fa-cog"></i></span>Settings</p></li>
+                            <li><p className="logout" href="#"><span className="picon"><i className="fas fa-sign-out-alt"></i></span>Logout</p></li>
                         </ul>
                         </div>
                     </div>
                     </div>
                 </div>
                 
-                <div className="popup">
-                    <div className="shadow"></div>
+                <div className={this.state.showAll ? "popup showpopup " : "popup "}>
+                <div className={this.props.closeAll ? "shadow  hidepopup" : "shadow "}></div>
                     <div className="inner_popup">
                         <div className="notification_dd">
                             <ul className="notification_ul">
                                 <li className="title">
                                     <p>All Notifications</p>
-                                    <p className="close"><i className="fas fa-times" aria-hidden="true"></i></p>
+                                    <p className={ this.props.closeAll ? "close hidepopup" : "close"}>
+                                        <i
+                                        onClick={this.closeDisplay}
+                                        className="fas fa-times"
+                                        aria-hidden="true"
+                                        ></i>
+                                    </p>
                                 </li> 
                                 <li className="starbucks success">
                                     <div className="notify_icon">
@@ -219,9 +297,11 @@ class Navbar extends Component {
                             </ul>
                         </div>
                     </div>
+                
+
                 </div>
                 
-                </div>
+            </div>
         )
     }
 }
