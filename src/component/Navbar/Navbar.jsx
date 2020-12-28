@@ -57,7 +57,7 @@ class Navbar extends Component {
                 <div className="navbar">
                     <div className="navbar_left">
                     <div className="logo">
-                        <p href="#">Coding Market</p>
+                        <a href="#">Coding Market</a>
                     </div>
                     </div>
                     <input type="checkbox" id="menu-toggle" />
@@ -65,12 +65,12 @@ class Navbar extends Component {
 
                     <div className="nav">
                         <ul className="nav-links">
-                            <li className="nav-item hide"><p href="#" className="nav-link">Notifications</p></li>
-                            <li className="nav-item hide"><p href="#" className="nav-link">Profile</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Home</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Market Place</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Dashboard</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Journal</p></li>
+                            <li className="nav-item hide"><a href="#" className="nav-link">Notifications</a></li>
+                            <li className="nav-item hide"><a href="#" className="nav-link">Profile</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Market Place</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Dashboard</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Journal</a></li>
                             <label htmlFor="menu-toggle" className="menu-hide"><i className="fa fa-times"></i></label>
                         </ul>
                     </div>
@@ -186,13 +186,13 @@ class Navbar extends Component {
 
                         <div className="profile_dd">
                         <ul className="profile_ul">
-                            <li className="profile_li"><p className="profile" href="#"><span className="picon"><i className="fas fa-user-alt"></i>
-                                </span>Profile</p>
+                            <li className="profile_li"><a className="profile" href="#"><span className="picon"><i className="fas fa-user-alt"></i>
+                                </span>Profile</a>
                             <div className="btn">My Account</div>
                             </li>
-                            <li><p className="address" href="#"><span className="picon"><i className="fas fa-map-marker"></i></span>Address</p></li>
-                            <li><p className="settings" href="#"><span className="picon"><i className="fas fa-cog"></i></span>Settings</p></li>
-                            <li><p className="logout" href="#"><span className="picon"><i className="fas fa-sign-out-alt"></i></span>Logout</p></li>
+                            <li><a className="address" href="#"><span className="picon"><i className="fas fa-map-marker"></i></span>Address</a></li>
+                            <li><a className="settings" href="#"><span className="picon"><i className="fas fa-cog"></i></span>Settings</a></li>
+                            <li><a className="logout" href="#"><span className="picon"><i className="fas fa-sign-out-alt"></i></span>Logout</a></li>
                         </ul>
                         </div>
                     </div>

@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  /* font-family: 'Montserrat'; */
 }
 
 .showpopup
@@ -41,7 +41,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
 }
 
 .navbar .navbar_left .logo a {
@@ -51,7 +51,7 @@ a {
 
 .navbar .navbar_right {
   display: flex;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #0000005e;
   padding-left: 33px;
 }
 
@@ -88,8 +88,8 @@ a {
   height: auto;
   display: none;
   border-radius: 3px;
-  box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.125),
-    -10px -10px 35px rgba(0, 0, 0, 0.125);
+  /* box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.125),
+    -10px -10px 35px rgba(0, 0, 0, 0.125); */
 }
 
 .navbar .profile .profile_dd:before,
@@ -372,8 +372,46 @@ body {
   margin: 0;
   margin-left: auto;
 }
+.logo img {
+  width: 75px;
+  height: 28px;
+}
+.navbar{
+  /* font-size: 12px; */
+  font-family: 'Lato', sans-serif;
+}
+.nav{
+  margin-left: auto;
+  margin-right: 28px;
+  font-size: 14px;
+}
+button.login_button {
+  padding: 8px 14px;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #FDC424;
+  font-size: 12px;
+  margin-right: 8px;
+}
+button.login_button:hover {
+  background-color:#FDC424;
+  border: 1px solid white;
+}
+button.Get_button {
+  padding: 8px 14px;
+  border-radius: 5px;
+  background-color: black;
+  border: 1px solid #ffffff;
+  color: white;
+  font-size: 12px;
+}
+button.Get_button:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000000;
+  color: rgb(0, 0, 0);
+}
 .nav-item{
-  font-weight: 800;
+  font-weight: normal;
 }
 .nav-links .nav-item .nav-link{
   color: black !important;
