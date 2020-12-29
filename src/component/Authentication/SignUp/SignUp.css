@@ -1,0 +1,27 @@
+.react-tel-input .form-control {
+	height: 1.1876em !important;
+	width: 100%;
+	font-family: 'Poppins';
+	font-size: '12px';
+}
+
+.MuiInputLabel-outlined.MuiInputLabel-shrink {
+	transform: translate(0px, -6px) scale(0.75) !important;
+}
+.react-tel-input .special-label {
+	display: none;
+}
+.react-tel-input .form-control {
+	border: 1px solid #c5cace;
+	border-radius: 10px !important;
+}
+.react-tel-input .form-control:hover {
+	border-color: #c5cace !important;
+}
+.react-tel-input .form-control:focus {
+	border-color: #c5cace;
+	box-shadow: 0 0 0 1px #c5cace;
+}
+.MuiButton-root {
+	border-radius: 10px !important;
+}

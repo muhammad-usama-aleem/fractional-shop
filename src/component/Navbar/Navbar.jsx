@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from '../../images/MainLogo/logo.png';
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -57,20 +58,19 @@ class Navbar extends Component {
                 <div className="navbar">
                     <div className="navbar_left">
                     <div className="logo">
-                        <p href="#">Coding Market</p>
+                    <img alt="logo" src={Logo} />
                     </div>
                     </div>
                     <input type="checkbox" id="menu-toggle" />
-                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
 
                     <div className="nav">
                         <ul className="nav-links">
-                            <li className="nav-item hide"><p href="#" className="nav-link">Notifications</p></li>
-                            <li className="nav-item hide"><p href="#" className="nav-link">Profile</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Home</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Market Place</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Dashboard</p></li>
-                            <li className="nav-item"><p href="#" className="nav-link">Journal</p></li>
+                            <li className="nav-item hide"><a href="#" className="nav-link">Notifications</a></li>
+                            <li className="nav-item hide"><a href="#" className="nav-link">Profile</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Market Place</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Dashboard</a></li>
+                            <li className="nav-item"><a href="#" className="nav-link">Journal</a></li>
                             <label htmlFor="menu-toggle" className="menu-hide"><i className="fa fa-times"></i></label>
                         </ul>
                     </div>
@@ -168,12 +168,8 @@ class Navbar extends Component {
                                         <p>Success</p>  
                                     </div>
                                 </li> 
-                                <li className="show_all">
-                                <p onClick={this.displayAll} className="link">
-                                Show All Activities
-                                </p>
-                                </li> 
                             </ul>
+                            <label for="menu-toggle" class="menu-show"><i class="fa fa-bars" aria-hidden="true"></i></label>
                         </div>
                         
                     </div>
@@ -186,17 +182,17 @@ class Navbar extends Component {
 
                         <div className="profile_dd">
                         <ul className="profile_ul">
-                            <li className="profile_li"><p className="profile" href="#"><span className="picon"><i className="fas fa-user-alt"></i>
-                                </span>Profile</p>
-                            <div className="btn">My Account</div>
-                            </li>
-                            <li><p className="address" href="#"><span className="picon"><i className="fas fa-map-marker"></i></span>Address</p></li>
-                            <li><p className="settings" href="#"><span className="picon"><i className="fas fa-cog"></i></span>Settings</p></li>
-                            <li><p className="logout" href="#"><span className="picon"><i className="fas fa-sign-out-alt"></i></span>Logout</p></li>
+                            <li className="profile_click">My Wishlist</li>
+                            <div className="border_profile"></div>
+                            <li className="profile_click">Account Settings</li>
+                            <div className="border_profile"></div>
+                            <li className="profile_click">Sign Out</li>
                         </ul>
                         </div>
                     </div>
                     </div>
+                    
+                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
                 </div>
                 
                 <div className={this.state.showAll ? "popup showpopup " : "popup "}>
