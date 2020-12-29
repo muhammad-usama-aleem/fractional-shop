@@ -1,11 +1,16 @@
 import React from 'react';
-// import {Grid,makeStyles,Typography,List,ListItem,ListItemIcon,ListItemText} from '@material-ui/core';
+import {Typography,Grid,List,ListItem,ListItemText} from '@material-ui/core';
 
 
 const CardDetailsHighLights =()=>{
 
 return(
-	<p>dfgh</p>
+	<Grid container >
+	  <Grid item container>
+	  </Grid>
+	  <Grid item container>
+	  </Grid>
+	</Grid>
 	)
 
 }
