@@ -5,15 +5,9 @@
   flex-wrap: wrap;
   row-gap: .5rem;
   column-gap:.5rem;
-/*  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-gap: 0.5rem;
-
-  grid-auto-flow: row dense; 
-  */
-  margin:0 0 5vh 0;
   padding: .6rem;
-
+  margin: 0 30px;
+  padding-left: 0;
 }
 
 .filters-div > *
@@ -77,10 +71,6 @@
  flex-grow: 1;
  border-radius: 3px;
 }
-
-
-
-
 .background-yellow
 {
 	background-color: #ffb700;

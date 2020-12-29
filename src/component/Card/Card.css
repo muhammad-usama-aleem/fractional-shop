@@ -35,10 +35,10 @@
   
   .card-h {
     z-index: -1;
-    box-shadow: -6px 4px 20px #0000005c;
+    box-shadow: 0px 0px 20px #00000036;
     scroll-snap-align: center;
     background: white;
-    width: 315px;
+    width: 275px;
     height: auto;
     display: -webkit-box;
     display: flex;
@@ -46,7 +46,6 @@
     -webkit-box-direction: normal;
             flex-direction: column;
     border-radius: 5px;
-
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
@@ -268,4 +267,8 @@
     border-bottom-left-radius: 8px;
     overflow: hidden;
   }
-  
+  @media (max-width:674px){
+    .card-flex {
+      justify-items: center;
+  }
+  } 

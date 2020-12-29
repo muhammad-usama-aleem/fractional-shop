@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Logo from '../../images/MainLogo/logo.png';
 import './Navbar.css';
 
 class Navbar extends Component {
@@ -57,11 +58,10 @@ class Navbar extends Component {
                 <div className="navbar">
                     <div className="navbar_left">
                     <div className="logo">
-                        <a href="#">Coding Market</a>
+                    <img alt="logo" src={Logo} />
                     </div>
                     </div>
                     <input type="checkbox" id="menu-toggle" />
-                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
 
                     <div className="nav">
                         <ul className="nav-links">
@@ -174,6 +174,7 @@ class Navbar extends Component {
                                 </p>
                                 </li> 
                             </ul>
+                            <label for="menu-toggle" class="menu-show"><i class="fa fa-bars" aria-hidden="true"></i></label>
                         </div>
                         
                     </div>
@@ -197,6 +198,8 @@ class Navbar extends Component {
                         </div>
                     </div>
                     </div>
+                    
+                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
                 </div>
                 
                 <div className={this.state.showAll ? "popup showpopup " : "popup "}>

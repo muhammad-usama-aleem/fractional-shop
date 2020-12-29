@@ -8,9 +8,6 @@ const Card = (props) => {
             <div className="card-h">
                 <div className="card-thumbnail">
                     <img className ="card-main-image" alt={props.img} src={props.img} />
-                    
-                    
-
                 <div className="tag tag-primary card-tag">
                 {props.category}
                 </div>

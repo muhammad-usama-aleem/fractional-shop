@@ -1,0 +1,36 @@
+.nodis{
+	display: none;
+}
+.sort
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	margin: 0 30px;
+}
+.sort >*
+{
+	text-align: right;
+	padding: 1rem;
+	padding-left: 0;
+}
+.sortby{
+	cursor: pointer;
+	font-size: 14px;
+}
+.sort-by-list
+{
+	list-style-type: none;
+	background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+    position: absolute;
+    right:0;
+    padding: 1.5rem;
+}
+
+.sort-by-list>*
+{
+	margin-bottom: 1.7rem;
+}
+
