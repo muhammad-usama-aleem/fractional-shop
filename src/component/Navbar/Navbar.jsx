@@ -168,11 +168,6 @@ class Navbar extends Component {
                                         <p>Success</p>  
                                     </div>
                                 </li> 
-                                <li className="show_all">
-                                <p onClick={this.displayAll} className="link">
-                                Show All Activities
-                                </p>
-                                </li> 
                             </ul>
                             <label for="menu-toggle" class="menu-show"><i class="fa fa-bars" aria-hidden="true"></i></label>
                         </div>
@@ -187,13 +182,11 @@ class Navbar extends Component {
 
                         <div className="profile_dd">
                         <ul className="profile_ul">
-                            <li className="profile_li"><a className="profile" href="#"><span className="picon"><i className="fas fa-user-alt"></i>
-                                </span>Profile</a>
-                            <div className="btn">My Account</div>
-                            </li>
-                            <li><a className="address" href="#"><span className="picon"><i className="fas fa-map-marker"></i></span>Address</a></li>
-                            <li><a className="settings" href="#"><span className="picon"><i className="fas fa-cog"></i></span>Settings</a></li>
-                            <li><a className="logout" href="#"><span className="picon"><i className="fas fa-sign-out-alt"></i></span>Logout</a></li>
+                            <li className="profile_click">My Wishlist</li>
+                            <div className="border_profile"></div>
+                            <li className="profile_click">Account Settings</li>
+                            <div className="border_profile"></div>
+                            <li className="profile_click">Sign Out</li>
                         </ul>
                         </div>
                     </div>

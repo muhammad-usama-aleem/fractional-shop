@@ -37,11 +37,11 @@ a {
   background: #fff;
   width: 100%;
   height: 60px;
-  padding: 0 25px;
+  padding: 0 62px;
+  padding-left: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
 }
 .nav{
   margin-left: auto;
@@ -55,7 +55,7 @@ a {
 
 .navbar .navbar_right {
   display: flex;
-  border-left: 1px solid #000000;
+  border-left: 1px solid #00000061;
   padding-left: 33px;
 }
 
@@ -209,11 +209,10 @@ a {
 .navbar .profile .profile_dd:before {
   right: 10px;
 }
-
-.navbar .profile .profile_dd ul li {
-  border-bottom: 1px solid #f1f2f4;
+.border_profile{
+  border-bottom: 1px solid #00000061;
+  margin: 0 8px;
 }
-
 .navbar .profile .profile_dd ul li a {
   display: block;
   padding: 15px 35px;
@@ -257,6 +256,9 @@ a {
 .navbar .profile.active .profile_dd,
 .navbar .notifications.active .notification_dd {
   display: block;
+  z-index: 1;
+  border-radius: 6px;
+  padding: 10px 0;
 }
 
 .popup {
@@ -533,7 +535,16 @@ a {
   display: none;
 }
 
-
+ul.profile_ul {
+  font-family: 'Lato';
+  font-size: 15px;
+}
+li.profile_click {
+  font-family: 'Lato';
+  font-size: 15px;
+  padding: 10px 20px;
+  opacity: 0.9;
+}
 
 
 @media only screen and (max-width: 957px) {

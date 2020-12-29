@@ -21,12 +21,21 @@
 }
 .sort-by-list
 {
+	margin-top: -27px;
+    margin-right: 98px;
 	list-style-type: none;
 	background-color: white;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
     position: absolute;
     right:0;
-    padding: 1.5rem;
+	padding: 1.5rem;
+	padding-bottom: 0;
+	font-family: 'Neue Montreal';
+	font-size: 12px;
+}
+@font-face {
+	font-family: 'Neue Montreal';
+	src: url('./NeueMontreal-Medium.otf');
 }
 
 .sort-by-list>*
