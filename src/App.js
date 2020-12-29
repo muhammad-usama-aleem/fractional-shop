@@ -4,6 +4,7 @@ import Sort from './component/Sort/Sort';
 import Cardlist from './component/Cardlist/Cardlist';
 import Filters from './component/Filters/Filters';
 import SignIn from './component/Authentication/SignIn/SignIn';
+import CardDetailsHighLights from './component/CardDetailsHighLights/CardDetailsHighLights';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         {/* <Filters />
         <Sort />
         <Cardlist /> */}
+        <CardDetailsHighLights />
       </div>
     </div>
   );
