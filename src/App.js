@@ -4,18 +4,18 @@ import Sort from './component/Sort/Sort';
 import Cardlist from './component/Cardlist/Cardlist';
 import Filters from './component/Filters/Filters';
 import SignIn from './component/Authentication/SignIn/SignIn';
-import CardDetailsHighLights from './component/CardDetailsHighLights/CardDetailsHighLights';
+import CardDetailsHeader from './component/CardDetailsHeader/CardDetailsHeader';
 
 function App() {
   return (
     <div>
       <Navbar />
       <div className="MIAdiffer">
-        <SignIn />
+        {/* <SignIn /> */}
         {/* <Filters />
         <Sort />
         <Cardlist /> */}
-        <CardDetailsHighLights />
+        <CardDetailsHeader />
       </div>
     </div>
   );
