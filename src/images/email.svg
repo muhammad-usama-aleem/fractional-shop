@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <g id="email_copy" data-name="email copy" transform="translate(0.212)">
+    <g id="Circle_Grid" data-name="Circle Grid">
+      <circle id="Ellipse_203" data-name="Ellipse 203" cx="64" cy="64" r="64" transform="translate(-0.212)" fill="#f5f5f5"/>
+    </g>
+    <g id="icon" transform="translate(30.976 42.957)">
+      <rect id="Rectangle_1255" data-name="Rectangle 1255" width="66.047" height="42.086" rx="1.952" fill="#f6c863"/>
+      <g id="Group_1360" data-name="Group 1360" transform="translate(0.424 0.503)">
+        <path id="Path_2601" data-name="Path 2601" d="M88.726,38.5c-4.964,4.958-11.115,10.566-16.257,15.315-2.544,2.408-5.192,4.7-7.79,7.043l-7.827,7-.725.644-.725-.644-7.83-7c-2.6-2.348-5.248-4.633-7.792-7.041C34.633,49.064,28.489,43.459,23.527,38.5c5.565,4.27,11.989,9.563,17.369,14.047,2.719,2.208,5.331,4.54,8,6.809l7.96,6.853H55.4l7.96-6.85c2.664-2.271,5.279-4.6,8-6.808,5.38-4.485,11.807-9.774,17.368-14.05Z" transform="translate(-23.526 -38.499)" fill="#eab54e"/>
+        <path id="Path_2602" data-name="Path 2602" d="M78.151,61.318,99,84.016,76.338,63.132Z" transform="translate(-33.8 -42.938)" fill="#eab54e"/>
+        <path id="Path_2603" data-name="Path 2603" d="M44.375,61.318l-20.849,22.7L46.188,63.132Z" transform="translate(-23.526 -42.938)" fill="#eab54e"/>
+      </g>
+    </g>
+  </g>
+</svg>
