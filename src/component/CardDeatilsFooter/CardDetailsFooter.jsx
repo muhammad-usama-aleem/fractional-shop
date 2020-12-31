@@ -1,1 +1,0 @@
-CardDetailsFooter.jsx
