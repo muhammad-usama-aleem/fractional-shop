@@ -1,0 +1,274 @@
+  .tag {
+    border-radius: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px;
+    padding: 0 5px;
+  }
+  
+  .tag-primary {
+    background-color: white;
+  }
+  
+  .card-left-tag {
+    margin-left: 82px;
+    color: grey;
+  }
+  
+  .card-right-tag {
+    margin-left: 275px;
+    stroke: white;
+    cursor: pointer;
+  }
+  
+  .wrapper {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    padding: 26px 0;
+  }
+  
+  .wrapper-light {
+    background: #F6F6F6;
+  }
+  
+  .card-h {
+    z-index: -1;
+    box-shadow: 0px 0px 20px #00000036;
+    scroll-snap-align: center;
+    background: white;
+    width: 275px;
+    height: auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    border-radius: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+
+  }
+  .card-h .card-thumbnail {
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-h .card-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .card-h .card-tag {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+  }
+  .card-h .card-body {
+    padding: 14px 20px 0;
+    -webkit-box-flex: 1;
+            flex: 1;
+  }
+  .card-h .card-foot {
+    padding: 0 20px 14px 20px;
+  }
+  .card-h .card-title {
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    white-space: normal;
+    margin-bottom: 6px;
+    max-height: 52px;
+  }
+  .card-h .card-name {
+    max-height: 42px;
+    line-height: 16px;
+  }
+  .card-h .card-rating {
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .card-h .card-rating .stars {
+    margin-top: -2px;
+    margin-right: 10px;
+  }
+  
+  .scrollable-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 992px) {
+    .scrollable-container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .scrollable-container {
+      max-width: 1140px;
+    }
+  }
+  
+  .scrollable-cards {
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    display: -webkit-box;
+    display: flex;
+    overflow-x: scroll;
+    display: flex;
+    padding: 5px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scrollable-cards .card-h {
+    flex-shrink: 0;
+    margin: 5px 5px;
+  }
+  .scrollable-cards .card-h:last-child {
+    border-right: 10px solid #F6F6F6;
+  }
+  
+  @media (min-width: 992px) {
+    .scrollable-cards {
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+              justify-content: center;
+      padding: 10px / 2 0;
+    }
+    .scrollable-cards .card-h {
+      -webkit-box-flex: 0;
+              flex: 0 0 calc(25% - 10px);
+    }
+    .scrollable-cards .card-h:last-child {
+      border-right: 0;
+    }
+  }
+  .card-main-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .card-text-header {
+    display: -webkit-box;
+    display: flex;
+    padding-bottom: 10px;
+  }
+  
+  .card-logo {
+    border-radius: 5px;
+  }
+  
+  .card_title {
+    margin-left: 5px;
+  }
+  
+  .box-title {
+    margin-top: 5px;
+    margin-bottom: 0;
+    line-height: 1em;
+    font-size: 20px;
+  }
+  small {
+    font-size: 70%;
+    font-weight: 400;
+    }
+  .break {
+    border-top: 1px solid grey;
+    margin: 0 -20px;
+    margin-bottom: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  
+  .target-cash-num {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+  
+  .target-cash-text {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+  }
+  
+  .meter {
+    height: 20px;
+    /* Can be anything */
+    position: relative;
+    background: #fff;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  }
+  
+  .meter > span {
+    display: block;
+    height: 100%;
+    -webkit-border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #2bc253;
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .meter > span:after, .animate > span > span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    z-index: 1;
+    background-size:  50px 50px;
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    animation: move 2s linear infinite;
+    -webkit-animation: move 2s linear infinite;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+  }
+  @media (max-width:674px){
+    .card-flex {
+      justify-items: center;
+  }
+  } 
