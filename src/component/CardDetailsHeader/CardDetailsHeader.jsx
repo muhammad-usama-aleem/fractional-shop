@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { Slide } from 'react-slideshow-image';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles,makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
-
+import {Grid,Paper}from '@material-ui/core';
 import './CardDetailsHeader.css';
 import 'react-slideshow-image/dist/styles.css';
 
@@ -46,6 +46,20 @@ const slideImages = [
     },
   })(Slider);
 
+ const applyStyles=makeStyles(theme=>({
+
+  
+     mainContetWidth:{
+        width:'100%',
+        margin: '8px 0',
+        padding:theme.spacing(3,0)
+     }
+ }))
+
+
+
+
+
 const CardDetailsHeader = () => {
     const slideRef = useRef();
     const properties = {
@@ -56,26 +70,36 @@ const CardDetailsHeader = () => {
     slideRef.current.goTo(parseInt(value, 10));
     console.log(value);
     }
-
+    const classes=applyStyles();
         return (
+            <>
+             
+                 <div className=  'sideMenuWidth'  >
+                    
+                         
+                            <p class="button_hover" href="#">Hover </p>
+                            <p class="button_hover" href="#">Hover </p>
+                            <p class="button_hover" href="#">Hover </p>
+                            <p class="button_hover" href="#">Hover </p>
+                            <p class="button_hover" href="#">Hover </p>
+                            <p class="button_hover" href="#">Hover </p>
+                            <p class="button_hover" href="#">Hover </p>
+                         
+                        
+                   
+                  </div>
+               
+
+
             <div className="Details">
-
-                <div class="side_button">
-                    <div class="side_button_wrapper">
-                            <p class="button_hover" href="#">Hover Me!</p>
-                            <p class="button_hover" href="#">Hover Me!</p>
-                            <p class="button_hover" href="#">Hover Me!</p>
-                            <p class="button_hover" href="#">Hover Me!</p>
-                            <p class="button_hover" href="#">Hover Me!</p>
-                            <p class="button_hover" href="#">Hover Me!</p>
-                            <p class="button_hover" href="#">Hover Me!</p>
-                    </div>
-                </div>
-
-
+               
+                <Paper   className={classes.mainContetWidth}   elevation={0}>
                 <div className="Header_with_Footer">
 
                     <div className="Details_header">
+
+                       <Grid container    zeroMinWidth>
+                         <Grid item xs={12}  md={6}>
                         <div className="details_left">
                             <div className="text-header">
                                 <img className = "header_logo" alt="logo" src={logo} />
@@ -149,7 +173,8 @@ const CardDetailsHeader = () => {
                                 </div>
                             </div>
                         </div>
-
+                        </Grid>
+                         <Grid item xs={12}  md={6}>
                         <div className="Details_right">
                             <div className="slideshow">
                                 <Slide ease="ease" ref={slideRef} {...properties}>
@@ -178,6 +203,8 @@ const CardDetailsHeader = () => {
                             </div>
                     
                         </div>
+                        </Grid>
+                        </Grid>
 
                     </div>
 
@@ -199,8 +226,10 @@ const CardDetailsHeader = () => {
                     </div>
                 
                 </div>
+               </Paper>
 
             </div>
+            </>
             )
 
 }

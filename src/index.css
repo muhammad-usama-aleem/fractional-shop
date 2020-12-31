@@ -1,5 +1,9 @@
 body {
-  margin: 0;
+  margin:0;
+  /* temporary chenges*/
+ padding: 0 10vw;
+  /*background:#7777;*/
+  /* temporary chenge*/
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

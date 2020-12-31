@@ -1,6 +1,7 @@
 .Details{
   display: flex;
-  margin-left: 80px;
+  position: relative;
+  /*margin-left: 80px;*/
 }
 .Details_header{
   font-family: 'Lato';
@@ -9,7 +10,7 @@
 .details_left {
   margin-right: 50px;
   margin-left: 30px;
-  width: 450px;
+  /*width: 450px;*/
 }
 .each-slide > div {
   display: flex;
@@ -46,7 +47,7 @@ img.indicator_img {
   border: 1px solid white;
 }
 .slideshow {
-  width: 430px;
+  width: 100%;
 }
 .each-slide{
   border-radius: 5px;
@@ -58,6 +59,11 @@ img.indicator_img {
   border-radius: 5px;
   width: 50px;
   height: 50px;
+}
+.Details_right
+{
+  padding: 2rem;
+
 }
 .card_title {
   margin-left: 5px;
@@ -186,24 +192,12 @@ p.Header_disabled {
   margin-right: 20px;
 }
 
-
-/* .side_button{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
-/* .side_button_wrapper {
-    position: relative;
-    display: block;
-} */
-
 .button_hover{
   display: block;
-  width: 150px;
+  /*width: 90px;*/
   margin-right: 30px;
-  height: 60px;
+  /*height: 60px;*/
+  padding: .4rem .5rem;
   line-height: 60px;
   font-weight: bold;
   text-decoration: none;
@@ -215,18 +209,96 @@ p.Header_disabled {
 /*   border: 3px solid #333; */
   transition: all .5s;
 }
+.button_hover:last-child{
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.button_hover:first-child{
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+}
+
+
+
+
 
 .button_hover:hover{
-  width: 150px;
+  width: 160px;
   margin-left: 30px;
   margin-right: 0;
   border: 3px solid #FDC424;
   background: #FDC424;
   color: #fff;
   border-radius: 10px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+
 }
 
+  .sideMenuWidth{
+        
+         position:absolute;
+         left: 3%;
+         width:90px;
+         z-index:1;
+         background: white;
+         border-radius: 4px;
 
+     }
+
+
+
+@media  (max-width: 1300px)
+{
+ .sideMenuWidth
+ {
+  left:2.5% ;
+ }
+
+}
+@media  (max-width: 1210px)
+{
+ .sideMenuWidth
+ {
+  left:2% ;
+ }
+
+}
+@media  (max-width: 1140px)
+{
+ .sideMenuWidth
+ {
+  left:1.5% ;
+ }
+
+}
+@media  (max-width: 1066px)
+{
+ .sideMenuWidth
+ {
+  left:1% ;
+ }
+
+}
+@media  (max-width: 1010px)
+{
+ .sideMenuWidth
+ {
+  left:.5% ;
+ }
+
+}
+@media  (max-width: 960px)
+{
+   .sideMenuWidth
+   {
+    display: none;
+   }
+
+
+}
+/*
 @media (max-width:1200px){
   .Details{
     display: flex;
@@ -268,4 +340,4 @@ p.Header_disabled {
   .details_left {
     width: 352px;
   }
-}
+}*/
