@@ -13,12 +13,14 @@ class Navbar extends Component {
                     </div>
                     </div>
                     <input type="checkbox" id="menu-toggle" />
-                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
+                    {/* <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>  */}
 
                     <div className="nav">
                         <ul className="nav-links">
                             <li className="nav-item"><a href="#" className="nav-link">Market Place</a></li>
                             <li className="nav-item"><a href="#" className="nav-link">Journal</a></li>
+                            <li className="nav-item hide"><a href="#" className="nav-link">Login</a></li>
+                            <li className="nav-item hide"><a href="#" className="nav-link">Get Started</a></li>
                             <label htmlFor="menu-toggle" className="menu-hide"><i className="fa fa-times"></i></label>
                         </ul>
                     </div>
@@ -26,6 +28,7 @@ class Navbar extends Component {
                         <button className="login_button">Login</button>
                         <button className="Get_button">Get Started</button>
                     </div>
+                    <label htmlFor="menu-toggle" class="menu-show"><i class="fa fa-bars"></i></label>
                 </div>
             </div>
         )

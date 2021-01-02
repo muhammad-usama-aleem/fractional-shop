@@ -3,13 +3,14 @@ import { Slide } from 'react-slideshow-image';
 import { withStyles,makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import {Grid,Paper}from '@material-ui/core';
-import './CardDetailsHeader.css';
-import 'react-slideshow-image/dist/styles.css';
+import Modalform from './Modalform';
 
 import Home1 from '../../images/home1.jpg';
 import Home2 from '../../images/home2.jpg';
 import Home3 from '../../images/home3.jpg';
 import logo from '../../images/logo.png';
+import './CardDetailsHeader.css';
+import 'react-slideshow-image/dist/styles.css';
 
 const slideImages = [
     Home1,
@@ -47,7 +48,6 @@ const slideImages = [
   })(Slider);
 
  const applyStyles=makeStyles(theme=>({
-
   
      mainContetWidth:{
         width:'100%',
@@ -58,14 +58,17 @@ const slideImages = [
 
 
 
-
-
 const CardDetailsHeader = () => {
+    
+    const [setOpen] = React.useState(false);
     const slideRef = useRef();
     const properties = {
         autoplay: true,
         arrows: true
     };
+    const handleClickOpen = () => {
+        setOpen(true);
+      };
     const move = (value) => {
     slideRef.current.goTo(parseInt(value, 10));
     console.log(value);
@@ -73,26 +76,16 @@ const CardDetailsHeader = () => {
     const classes=applyStyles();
         return (
             <>
-             
-                 <div className=  'sideMenuWidth'  >
-                    
-                         
-                            <p class="button_hover" href="#">Hover </p>
-                            <p class="button_hover" href="#">Hover </p>
-                            <p class="button_hover" href="#">Hover </p>
-                            <p class="button_hover" href="#">Hover </p>
-                            <p class="button_hover" href="#">Hover </p>
-                            <p class="button_hover" href="#">Hover </p>
-                            <p class="button_hover" href="#">Hover </p>
-                         
-                        
-                   
+                 <div className='sideMenuWidth'>
+                    <p class="button_hover" href="#">Hover </p>
+                    <p class="button_hover" href="#">Hover </p>
+                    <p class="button_hover" href="#">Hover </p>
+                    <p class="button_hover" href="#">Hover </p>
+                    <p class="button_hover" href="#">Hover </p>
+                    <p class="button_hover" href="#">Hover </p>
+                    <p class="button_hover" href="#">Hover </p>
                   </div>
-               
-
-
             <div className="Details">
-               
                 <Paper   className={classes.mainContetWidth}   elevation={0}>
                 <div className="Header_with_Footer">
 
@@ -158,7 +151,8 @@ const CardDetailsHeader = () => {
 
 
                             <div className="buttons_row">
-                                <button className="login_button">Invest Now</button>
+                                {/* <button className="login_button" onClick={handleClickOpen}>Invest Now</button> */}
+                                <Modalform PrettoSlider={PrettoSlider} />
                                 <div className="add_to_list">
                                     <svg className="heart" width="20" height="20" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6.32595 11.2559L5.56198 10.556C2.84698 8.094 1.05398 6.47002 1.05398 4.47702C1.0501 4.0951 1.12245 3.71623 1.26681 3.36264C1.41118 3.00904 1.62467 2.68776 1.89474 2.41769C2.16481 2.14762 2.48603 1.93425 2.83963 1.78988C3.19322 1.64552 3.57209 1.57311 3.95401 1.57699C4.40501 1.58027 4.85002 1.68009 5.25918 1.86984C5.66834 2.05958 6.0321 2.33482 6.32595 2.67697C6.61981 2.33482 6.98357 2.05958 7.39273 1.86984C7.80189 1.68009 8.24696 1.58027 8.69796 1.57699C9.07984 1.57325 9.45863 1.64571 9.81216 1.79013C10.1657 1.93454 10.4869 2.14802 10.7569 2.41806C11.027 2.68809 11.2404 3.00922 11.3849 3.36276C11.5293 3.71629 11.6017 4.09514 11.598 4.47702C11.598 6.47002 9.80599 8.094 7.08999 10.561L6.32595 11.2559Z" fill="none"/>

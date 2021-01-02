@@ -62,7 +62,7 @@ return(
 	 <Grid style={{marginTop:'5rem'}} direction="column" container spacing={3}>
 	  <Grid item xs={12}>
 	   <div className={classes.gridChildLogo}>
-	   	<img alt="logo"  src={dummy}/>
+	   	<img className="footerimg" alt="logo"  src={dummy}/>
 	   <Typography variant='h2'>Prestige Sky High</Typography>
 	   </div>
 	  </Grid>
